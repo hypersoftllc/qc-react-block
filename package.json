@@ -1,9 +1,10 @@
 {
   "name": "qc-react-block",
   "version": "0.0.0-alpha",
-  "description": "A `div` with the implied semantics of representing a block element.",
+  "description": "A React component that renders a div with the implied semantics of representing a block element.",
   "keywords": [
     "block",
+    "component",
     "div",
     "react",
     "semantic"
