@@ -1,17 +1,49 @@
 {
   "name": "qc-react-block",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
-    "react-scripts": "1.0.17"
+  "version": "0.0.0-alpha",
+  "description": "A `div` with the implied semantics of representing a block element.",
+  "keywords": [
+    "block",
+    "div",
+    "react",
+    "semantic"
+  ],
+  "author": {
+    "name": "Danny Hurlburt",
+    "url": "https://github.com/dhurlburtusa"
+  },
+  "homepage": "https://github.com/hypersoftllc/qc-react-block#readme",
+  "license": "ISC",
+  "browserslist": [
+    "> 0.5%",
+    "Last 2 major versions",
+    "Firefox ESR"
+  ],
+  "engines": {
+    "node": ">=4.0.0",
+    "npm": ">=3.0.0"
+  },
+  "files": [
+    "src/index.css",
+    "src/index.js"
+  ],
+  "main": "index.js",
+  "bugs": {
+    "url": "https://github.com/hypersoftllc/qc-react-block/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hypersoftllc/qc-react-block.git"
   },
   "scripts": {
     "coverage": "react-scripts test --coverage",
     "test": "react-scripts test"
   },
+  "dependencies": {
+    "react": ">15.x"
+  },
   "devDependencies": {
-    "react-test-renderer": "^16.0.0"
+    "react-scripts": "1.0.17",
+    "react-test-renderer": ">15.x"
   }
 }
