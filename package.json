@@ -41,7 +41,7 @@
     "coveralls": "cat ./coverage/lcov.info | coveralls",
     "prepare": "npm run build",
     "test": "react-scripts test",
-    "travisci": "npm test"
+    "travisci": "npm run coverage"
   },
   "dependencies": {
     "react": ">15.x"
