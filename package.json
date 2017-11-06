@@ -37,6 +37,7 @@
     "url": "https://github.com/hypersoftllc/qc-react-block.git"
   },
   "scripts": {
+    "clean": "rimraf coverage",
     "coverage": "react-scripts test --coverage",
     "test": "react-scripts test"
   },
@@ -45,6 +46,7 @@
   },
   "devDependencies": {
     "react-scripts": "1.0.17",
-    "react-test-renderer": ">15.x"
+    "react-test-renderer": ">15.x",
+    "rimraf": "^2.6.2"
   }
 }
