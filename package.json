@@ -39,7 +39,8 @@
     "clean": "rimraf coverage",
     "coverage": "react-scripts test --coverage",
     "prepare": "npm run build",
-    "test": "react-scripts test"
+    "test": "react-scripts test",
+    "travisci": "npm test"
   },
   "dependencies": {
     "react": ">15.x"
