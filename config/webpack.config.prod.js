@@ -4,9 +4,7 @@ const autoprefixer = require('autoprefixer');
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const ManifestPlugin = require('webpack-manifest-plugin');
 const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
-const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 const eslintFormatter = require('react-dev-utils/eslintFormatter');
 const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
 const paths = require('./paths');
@@ -87,9 +85,8 @@ module.exports = {
     // https://github.com/facebookincubator/create-react-app/issues/290
     // `web` extension prefixes have been added for better support
     // for React Native Web.
-    extensions: ['.web.js', '.mjs', '.js', '.json', '.web.jsx', '.jsx'],
-    alias: {
-      
+    extensions: ['.js', '.json', '.jsx'],
+    alias: {      
       // Support React Native Web
       // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
       'react-native': 'react-native-web',
@@ -106,10 +103,6 @@ module.exports = {
   module: {
     strictExportPresence: true,
     rules: [
-      // TODO: Disable require.ensure as it's not a standard language feature.
-      // We are waiting for https://github.com/facebookincubator/create-react-app/issues/2176.
-      // { parser: { requireEnsure: false } },
-
       // First, run the linter.
       // It's important to do this before Babel processes the JS.
       {
@@ -148,7 +141,6 @@ module.exports = {
             include: paths.appSrc,
             loader: require.resolve('babel-loader'),
             options: {
-              
               compact: true,
             },
           },
@@ -269,48 +261,6 @@ module.exports = {
     new ExtractTextPlugin({
       filename: cssFilename,
     }),
-    // Generate a manifest file which contains a mapping of all asset filenames
-    // to their corresponding output file so that tools can pick it up without
-    // having to parse `index.html`.
-    new ManifestPlugin({
-      fileName: 'asset-manifest.json',
-    }),
-    // Generate a service worker script that will precache, and keep up to date,
-    // the HTML & assets that are part of the Webpack build.
-    new SWPrecacheWebpackPlugin({
-      // By default, a cache-busting query parameter is appended to requests
-      // used to populate the caches, to ensure the responses are fresh.
-      // If a URL is already hashed by Webpack, then there is no concern
-      // about it being stale, and the cache-busting can be skipped.
-      dontCacheBustUrlsMatching: /\.\w{8}\./,
-      filename: 'service-worker.js',
-      logger(message) {
-        if (message.indexOf('Total precache size is') === 0) {
-          // This message occurs for every build and is a bit too noisy.
-          return;
-        }
-        if (message.indexOf('Skipping static resource') === 0) {
-          // This message obscures real errors so we ignore it.
-          // https://github.com/facebookincubator/create-react-app/issues/2612
-          return;
-        }
-        console.log(message);
-      },
-      minify: true,
-      // For unknown URLs, fallback to the index page
-      navigateFallback: publicUrl + '/index.html',
-      // Ignores URLs starting from /__ (useful for Firebase):
-      // https://github.com/facebookincubator/create-react-app/issues/2237#issuecomment-302693219
-      navigateFallbackWhitelist: [/^(?!\/__).*/],
-      // Don't precache sourcemaps (they're large) and build asset manifest:
-      staticFileGlobsIgnorePatterns: [/\.map$/, /asset-manifest\.json$/],
-    }),
-    // Moment.js is an extremely popular library that bundles large locale files
-    // by default due to how Webpack interprets its code. This is a practical
-    // solution that requires the user to opt into importing specific locales.
-    // https://github.com/jmblog/how-to-optimize-momentjs-with-webpack
-    // You can remove this if you don't use Moment.js:
-    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
   ],
   // Some libraries import Node modules but don't use them in the browser.
   // Tell Webpack to provide empty mocks for them so importing them works.
