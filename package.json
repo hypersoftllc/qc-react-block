@@ -38,6 +38,7 @@
     "build": "react-scripts build",
     "clean": "rimraf coverage",
     "coverage": "react-scripts test --coverage",
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
     "prepare": "npm run build",
     "test": "react-scripts test",
     "travisci": "npm test"
@@ -46,6 +47,7 @@
     "react": ">15.x"
   },
   "devDependencies": {
+    "coveralls": "^3.0.0",
     "react-scripts": "1.0.17",
     "react-test-renderer": ">15.x",
     "rimraf": "^2.6.2"
