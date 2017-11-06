@@ -25,7 +25,7 @@
     "npm": ">=3.0.0"
   },
   "files": [
-    "src/index.css",
+    "src/Block.css",
     "src/index.jsx"
   ],
   "main": "src/index.jsx",
