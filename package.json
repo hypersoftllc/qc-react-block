@@ -24,9 +24,9 @@
   },
   "files": [
     "src/Block.css",
-    "src/index.js"
+    "src/index.jsx"
   ],
-  "main": "src/index.js",
+  "main": "src/index.jsx",
   "bugs": {
     "url": "https://github.com/hypersoftllc/qc-react-block/issues"
   },
