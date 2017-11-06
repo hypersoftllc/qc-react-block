@@ -1,6 +1,6 @@
 import React from 'react'
 
-import styles from './index.css'
+import styles_unused from './Block.css'
 
 /**
  * @dependency Block.css
