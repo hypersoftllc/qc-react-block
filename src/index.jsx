@@ -1,8 +1,5 @@
 import React from 'react'
 
-// eslint-disable-next-line
-import styles_unused from './Block.css'
-
 
 export default function Block(props) {
   let attrs, className
