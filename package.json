@@ -43,9 +43,6 @@
     "test": "node scripts/test.js",
     "travisci": "npm run coverage"
   },
-  "dependencies": {
-    "react": ">15.x"
-  },
   "devDependencies": {
     "autoprefixer": "7.1.6",
     "babel-core": "6.26.0",
@@ -82,6 +79,9 @@
     "url-loader": "0.6.2",
     "webpack": "3.8.1",
     "whatwg-fetch": "2.0.3"
+  },
+  "peerDependencies": {
+    "react": ">=15.x"
   },
   "jest": {
     "collectCoverageFrom": [
