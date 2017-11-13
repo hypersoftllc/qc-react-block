@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 
 export default function Block(props) {
@@ -25,7 +26,13 @@ export default function Block(props) {
     </div>
   )
 }
-    
+
 Block.defaultProps = {
   compClassName: 'Block',
+}
+
+Block.propTypes = {
+  children: PropTypes.node,
+  className: PropTypes.string,
+  compClassName: PropTypes.string,
 }

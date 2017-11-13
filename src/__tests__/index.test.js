@@ -1,3 +1,6 @@
+/* eslint-env jest */
+/* eslint padded-blocks: "off" */
+
 import React from 'react'
 import TestRenderer from 'react-test-renderer'
 
@@ -24,7 +27,7 @@ describe('Block', () => {
   describe('rendered', () => {
 
     describe('with no props', () => {
-      
+
       it('should use default props', () => {
         let comp, tree
 
@@ -39,7 +42,7 @@ describe('Block', () => {
     })
 
     describe('with children', () => {
-      
+
       it('should render children', () => {
         let comp, tree
 
@@ -56,7 +59,7 @@ describe('Block', () => {
     })
 
     describe('with className', () => {
-      
+
       it('should render with expected class attribute', () => {
         let comp, tree
 
@@ -71,7 +74,7 @@ describe('Block', () => {
     })
 
     describe('with compClassName', () => {
-      
+
       it('should render with expected class attribute', () => {
         let comp, tree
 
@@ -98,7 +101,7 @@ describe('Block', () => {
       })
 
     })
-  
+
   })
 
 })

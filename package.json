@@ -39,6 +39,7 @@
     "clean": "rimraf build coverage",
     "coverage": "jest --coverage",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
+    "lint": "eslint src/",
     "prepare": "npm run build",
     "test": "jest --watch",
     "travisci": "npm run coverage"
@@ -50,16 +51,15 @@
     "babel-preset-react": "^6.24.1",
     "coveralls": "^3.0.0",
     "eslint": "4.10.0",
+    "eslint-plugin-react": "^7.4.0",
     "fs-extra": "^3.0.1",
     "jest": "20.0.4",
+    "prop-types": "^15.6.0",
     "react": ">=15.x",
     "react-test-renderer": ">15.x",
     "rimraf": "^2.6.2"
   },
   "peerDependencies": {
     "react": ">=15.x"
-  },
-  "eslintConfig": {
-    "extends": "react"
   }
 }
