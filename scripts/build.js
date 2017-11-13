@@ -1,10 +1,7 @@
-// const fs = require('fs')
 const fse = require('fs-extra')
 const path = require('path')
 
 const babel = require('babel-core')
-// const copyfiles = require('copyfiles')
-// const outputFileSync = require('output-file-sync')
 
 
 let callback, inputFilename, outputFilename
@@ -17,7 +14,6 @@ callback = function (err, result) {
   let outputFilename = path.resolve(__dirname, '../build/Block.js')
   fse.outputFileSync(outputFilename, result.code, { encoding: 'utf8' })
 }
-
 babel.transformFile(inputFilename, callback)
 
 
@@ -28,9 +24,5 @@ callback = function (err) {
     console.error(err)
   }
 }
-// fs.copyFile(inputFilename, outputFilename, callback)
-
-// copyfiles([inputFilename, outputFilename], callback)
-
 fse.copy(inputFilename, outputFilename)
     .catch(callback)
