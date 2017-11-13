@@ -31,10 +31,12 @@ import React from 'react'
 
 import Block from 'qc-react-block'
 
+import 'qc-react-block/lib/Block.css'
+
 
 export default function SomeComponent(props) {
   return (
-    <Block>
+    <Block className="Some">
       <h2>Some Component</h2>
       <p>Some component demo'ing the Block component.</p>
     </Block>
