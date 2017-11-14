@@ -1,0 +1,65 @@
+{
+  "name": "qc-react-block",
+  "version": "0.0.0",
+  "description": "A React component that renders a div with the implied semantics of representing a block element.",
+  "keywords": [
+    "block",
+    "component",
+    "div",
+    "react",
+    "semantic"
+  ],
+  "author": {
+    "name": "Danny Hurlburt",
+    "url": "https://github.com/dhurlburtusa"
+  },
+  "homepage": "https://github.com/hypersoftllc/qc-react-block#readme",
+  "license": "ISC",
+  "browserslist": [
+    "> 0.5%"
+  ],
+  "engines": {
+    "node": ">=4.0.0",
+    "npm": ">=3.0.0"
+  },
+  "files": [
+    "lib/Block.css",
+    "lib/Block.js"
+  ],
+  "main": "lib/Block.js",
+  "bugs": {
+    "url": "https://github.com/hypersoftllc/qc-react-block/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hypersoftllc/qc-react-block.git"
+  },
+  "scripts": {
+    "build": "node scripts/build.js",
+    "clean": "rimraf coverage lib",
+    "coverage": "jest --coverage",
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
+    "lint": "eslint src/",
+    "prepare": "npm run build",
+    "test": "jest --watch",
+    "travisci": "npm run coverage"
+  },
+  "devDependencies": {
+    "babel-eslint": "7.2.3",
+    "babel-jest": "20.0.3",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "coveralls": "^3.0.0",
+    "eslint": "4.10.0",
+    "eslint-plugin-react": "^7.4.0",
+    "fs-extra": "^3.0.1",
+    "jest": "20.0.4",
+    "prop-types": "^15.6.0",
+    "react": ">=15.x",
+    "react-test-renderer": ">15.x",
+    "rimraf": "^2.6.2"
+  },
+  "peerDependencies": {
+    "react": ">=15.x"
+  }
+}

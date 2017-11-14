@@ -1,0 +1,4 @@
+.Block {
+  box-sizing: border-box;
+  overflow: auto;
+}

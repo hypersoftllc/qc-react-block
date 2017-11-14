@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Block rendered with children should render children 1`] = `
+<div
+  className="Block"
+>
+  <span>
+    Child
+  </span>
+</div>
+`;
+
+exports[`Block rendered with className should render with expected class attribute 1`] = `
+<div
+  className="Block Foo"
+/>
+`;
+
+exports[`Block rendered with compClassName should render with expected class attribute 1`] = `
+<div
+  className=""
+/>
+`;
+
+exports[`Block rendered with compClassName should render with expected class attribute 2`] = `
+<div
+  className="foo"
+/>
+`;
+
+exports[`Block rendered with compClassName should render with expected class attribute 3`] = `
+<div
+  className="block foo"
+/>
+`;
+
+exports[`Block rendered with no props should use default props 1`] = `
+<div
+  className="Block"
+/>
+`;
