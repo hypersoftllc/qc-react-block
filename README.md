@@ -1,4 +1,4 @@
-# qc-react-block
+# @qc/react-block
 
 [![Build Status][travis-svg]][travis-url]
 [![Coverage Status][coverage-image]][coverage-url]
@@ -19,13 +19,13 @@ React component.
 ## Installation
 
 ```sh
-npm install --save qc-react-block
+npm install --save @qc/react-block
 ```
 
 or
 
 ```sh
-yarn add qc-react-block
+yarn add @qc/react-block
 ```
 
 
@@ -34,9 +34,9 @@ yarn add qc-react-block
 ```jsx
 import React from 'react'
 
-import Block from 'qc-react-block'
+import Block from '@qc/react-block'
 
-import 'qc-react-block/dist/styles/Block.css'
+import '@qc/react-block/dist/styles/Block.css'
 
 
 export default function SomeComponent(props) {
@@ -56,19 +56,19 @@ export default function SomeComponent(props) {
 This package also comes with the source and an ES variation.  Instead of
 
 ```jsx
-import Block from 'qc-react-block'
+import Block from '@qc/react-block'
 ```
 
 use
 
 ```jsx
-import Block from 'qc-react-block/es/Block'
+import Block from '@qc/react-block/es/Block'
 ```
 
 or
 
 ```jsx
-import Block from 'qc-react-block/src/Block'
+import Block from '@qc/react-block/src/Block'
 ```
 
 You will need to be sure to transpile the code to a version compatible with the
@@ -77,11 +77,11 @@ browsers you plan to support.
 
 [coverage-image]: https://coveralls.io/repos/github/hypersoftllc/qc-react-block/badge.svg?branch=master
 [coverage-url]: https://coveralls.io/github/hypersoftllc/qc-react-block?branch=master
-[downloads-image]: http://img.shields.io/npm/dm/qc-react-block.svg
-[downloads-url]: http://npm-stat.com/charts.html?package=qc-react-block
-[license-image]: http://img.shields.io/npm/l/qc-react-block.svg
+[downloads-image]: http://img.shields.io/npm/dm/@qc/react-block.svg
+[downloads-url]: http://npm-stat.com/charts.html?package=@qc/react-block
+[license-image]: http://img.shields.io/npm/l/@qc/react-block.svg
 [license-url]: LICENSE
-[package-url]: https://npmjs.org/package/qc-react-block
-[npm-badge-png]: https://nodei.co/npm/qc-react-block.png?downloads=true&stars=true
+[package-url]: https://npmjs.org/package/@qc/react-block
+[npm-badge-png]: https://nodei.co/npm/@qc/react-block.png?downloads=true&stars=true
 [travis-svg]: https://travis-ci.org/hypersoftllc/qc-react-block.svg?branch=master
 [travis-url]: https://travis-ci.org/hypersoftllc/qc-react-block

@@ -1,5 +1,5 @@
 {
-  "name": "qc-react-block",
+  "name": "@qc/react-block",
   "version": "0.0.0",
   "description": "A React component that renders a div with the implied semantics of representing a block element.",
   "keywords": [
