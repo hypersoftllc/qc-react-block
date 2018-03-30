@@ -2,7 +2,7 @@
 
 exports[`Block rendered with children should render children 1`] = `
 <div
-  className="Block"
+  className="Block "
 >
   <span>
     Child
@@ -18,13 +18,13 @@ exports[`Block rendered with className should render with expected class attribu
 
 exports[`Block rendered with compClassName should render with expected class attribute 1`] = `
 <div
-  className=""
+  className=" "
 />
 `;
 
 exports[`Block rendered with compClassName should render with expected class attribute 2`] = `
 <div
-  className="foo"
+  className=" foo"
 />
 `;
 
@@ -36,6 +36,6 @@ exports[`Block rendered with compClassName should render with expected class att
 
 exports[`Block rendered with no props should use default props 1`] = `
 <div
-  className="Block"
+  className="Block "
 />
 `;
