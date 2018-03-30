@@ -23,6 +23,7 @@
     "npm": ">=4.0.0"
   },
   "files": [
+    "dist/",
     "es/",
     "lib/",
     "src/"
@@ -73,6 +74,7 @@
     "rimraf": "^2.6.2"
   },
   "peerDependencies": {
+    "prop-types": ">=15.x",
     "react": ">=15.x"
   }
 }
