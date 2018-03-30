@@ -1,38 +1,29 @@
+import PT from 'prop-types'
 import React from 'react'
-import PropTypes from 'prop-types'
 
 
-export default function Block(props) {
-  let attrs, className
-
-  attrs = Object.assign({}, props)
-  className = []
-
-  if (props.compClassName) {
-    className.push(props.compClassName)
+function Block(props) {
+  const domProps = {
+    ...props,
+    className: [props.compClassName, props.className].join(' '),
   }
-  if (props.className) {
-    className.push(props.className)
-  }
-
-  attrs.className = className.join(' ')
-
-  delete attrs.children
-  delete attrs.compClassName
-
+  delete domProps.compClassName
   return (
-    <div {...attrs}>
+    <div {...domProps}>
       {props.children}
     </div>
   )
 }
 
 Block.defaultProps = {
+  className: '',
   compClassName: 'Block',
 }
 
 Block.propTypes = {
-  children: PropTypes.node,
-  className: PropTypes.string,
-  compClassName: PropTypes.string,
+  children: PT.node,
+  className: PT.string,
+  compClassName: PT.string,
 }
+
+export default Block
