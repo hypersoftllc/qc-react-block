@@ -31,7 +31,7 @@ import React from 'react'
 
 import Block from 'qc-react-block'
 
-import 'qc-react-block/lib/Block.css'
+import 'qc-react-block/dist/styles/Block.css'
 
 
 export default function SomeComponent(props) {

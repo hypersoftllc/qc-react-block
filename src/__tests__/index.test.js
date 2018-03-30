@@ -4,7 +4,7 @@
 import React from 'react'
 import TestRenderer from 'react-test-renderer'
 
-import Block from '../'
+import Block from '../Block'
 
 
 describe('Block', () => {
