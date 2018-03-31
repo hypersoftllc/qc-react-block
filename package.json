@@ -42,6 +42,9 @@
       "<rootDir>/src/"
     ]
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "npm run build:cjs && npm run build:css && npm run build:es",
     "build:cjs": "cross-env BABEL_ENV=cjs babel src -d lib/",
