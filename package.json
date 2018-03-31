@@ -1,7 +1,7 @@
 {
   "name": "@qc/react-block",
   "version": "0.0.0",
-  "description": "A React component that renders a div with the implied semantics of representing a block element.",
+  "description": "A React component that renders a div with the semantics of representing a block structure or region.",
   "keywords": [
     "block",
     "component",
@@ -13,7 +13,7 @@
     "name": "Danny Hurlburt",
     "url": "https://github.com/dhurlburtusa"
   },
-  "homepage": "https://github.com/hypersoftllc/qc-react-block#readme",
+  "homepage": "https://github.com/hypersoftllc/qc-react-block",
   "license": "ISC",
   "browserslist": [
     "> 0.5%"
