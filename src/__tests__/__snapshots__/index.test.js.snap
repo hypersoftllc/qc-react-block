@@ -2,7 +2,7 @@
 
 exports[`Block rendered with children should render children 1`] = `
 <div
-  className="Block "
+  className="Block"
 >
   <span>
     Child
@@ -18,13 +18,13 @@ exports[`Block rendered with className should render with expected class attribu
 
 exports[`Block rendered with compClassName should render with expected class attribute 1`] = `
 <div
-  className=" "
+  className=""
 />
 `;
 
 exports[`Block rendered with compClassName should render with expected class attribute 2`] = `
 <div
-  className=" foo"
+  className="foo"
 />
 `;
 
@@ -36,55 +36,55 @@ exports[`Block rendered with compClassName should render with expected class att
 
 exports[`Block rendered with compType should render with expected component 1`] = `
 <address
-  className="Block "
+  className="Block"
 />
 `;
 
 exports[`Block rendered with compType should render with expected component 2`] = `
 <aside
-  className="Block "
+  className="Block"
 />
 `;
 
 exports[`Block rendered with compType should render with expected component 3`] = `
 <article
-  className="Block "
+  className="Block"
 />
 `;
 
 exports[`Block rendered with compType should render with expected component 4`] = `
 <div
-  className="Block "
+  className="Block"
 />
 `;
 
 exports[`Block rendered with compType should render with expected component 5`] = `
 <footer
-  className="Block "
+  className="Block"
 />
 `;
 
 exports[`Block rendered with compType should render with expected component 6`] = `
 <header
-  className="Block "
+  className="Block"
 />
 `;
 
 exports[`Block rendered with compType should render with expected component 7`] = `
 <main
-  className="Block "
+  className="Block"
 />
 `;
 
 exports[`Block rendered with compType should render with expected component 8`] = `
 <nav
-  className="Block "
+  className="Block"
 />
 `;
 
 exports[`Block rendered with compType should render with expected component 9`] = `
 <section
-  className="Block "
+  className="Block"
 />
 `;
 
@@ -96,7 +96,7 @@ exports[`Block rendered with compType should render with expected component 10`]
 
 exports[`Block rendered with compType should render with expected component 11`] = `
 <div
-  className="block "
+  className="block"
 />
 `;
 
@@ -108,6 +108,6 @@ exports[`Block rendered with compType should render with expected component 12`]
 
 exports[`Block rendered with no props should use default props 1`] = `
 <div
-  className="Block "
+  className="Block"
 />
 `;
