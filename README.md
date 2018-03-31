@@ -74,7 +74,13 @@ import Block from '@qc/react-block/src/Block'
 You will need to be sure to transpile the code to a version compatible with the
 browsers you plan to support.
 
+The source version is using object spread syntax.  In order to transpile it with
+[babel], you must include the [object spread transform
+plugin][babel-obj-sprd-txm].
 
+
+[babel]: https://babeljs.io/
+[babel-obj-sprd-txm]: https://babeljs.io/docs/plugins/transform-object-rest-spread/
 [coverage-image]: https://coveralls.io/repos/github/hypersoftllc/qc-react-block/badge.svg?branch=master
 [coverage-url]: https://coveralls.io/github/hypersoftllc/qc-react-block?branch=master
 [downloads-image]: http://img.shields.io/npm/dm/@qc/react-block.svg
