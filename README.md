@@ -32,6 +32,8 @@ yarn add @qc/react-block
 
 ## Example Usage
 
+**As the Root**
+
 ```jsx
 import React from 'react'
 
@@ -40,19 +42,21 @@ import Block from '@qc/react-block'
 import '@qc/react-block/dist/styles/Block.css'
 
 
-export default function SomeComponent(props) {
+export default function MyBlockComponent(props) {
   return (
-    <Block className="Some">
-      <h1>Some Component</h1>
+    <Block className="My">
+      <h1>My Block Component</h1>
       {/*
       Note: The margins of the `h1` and `p` won't bleed-through
       like they would with default styled `div`s.
       */}
-      <p>Some component demo'ing the Block component.</p>
+      <p>My component demo'ing the Block component.</p>
     </Block>
   )
 }
 ```
+
+**Component Regions**
 
 ```jsx
 import React from 'react'
@@ -78,6 +82,42 @@ export default function Panel(props) {
         <button>...</button>
       </Block>
     </Block>
+  )
+}
+```
+
+**Custom Element**
+
+```jsx
+import React from 'react'
+
+import Block from '@qc/react-block'
+
+import '@qc/react-block/dist/styles/Block.css'
+
+
+export default function SiteFooter(props) {
+  return (
+    <Block comp="footer">
+      ...
+    </Block>
+  )
+}
+```
+
+**With `Block` CSS**
+
+```jsx
+import React from 'react'
+
+import '@qc/react-block/dist/styles/Block.css'
+
+
+export default function SiteFooter(props) {
+  return (
+    <footer className="Block">
+      ...
+    </footer>
   )
 }
 ```
