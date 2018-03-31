@@ -86,7 +86,7 @@ export default function Panel(props) {
 }
 ```
 
-**Custom Element**
+**Custom Component Type**
 
 ```jsx
 import React from 'react'
@@ -98,7 +98,7 @@ import '@qc/react-block/dist/styles/Block.css'
 
 export default function SiteFooter(props) {
   return (
-    <Block comp="footer">
+    <Block compType="footer">
       ...
     </Block>
   )
