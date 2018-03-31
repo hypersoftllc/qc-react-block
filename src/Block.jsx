@@ -5,7 +5,7 @@ import React from 'react'
 function Block(props) {
   const domProps = {
     ...props,
-    className: [props.compClassName, props.className].join(' '),
+    className: `${props.compClassName} ${props.className}`,
   }
   delete domProps.children
   delete domProps.compClassName
