@@ -7,13 +7,14 @@
 
 [![npm badge][npm-badge-png]][package-url]
 
-A React component that renders a div with the implied semantics of representing
-a block element.  The default CSS prevents margin bleed-through which usually
-happens with heading elements, paragraph elements, and others.  Also,
-`border-box` box-sizing is used.
+A React component that renders a `div` with the semantics of representing a
+block structure or region.  However, unlike a `div`, a `Block`'s default CSS
+prevents margin bleed-through which usually happens with heading elements,
+paragraph elements, and others.  Also, `border-box` box-sizing is used.
 
 One of the most common use cases is to use `Block` as the root of a custom
-React component.
+React component or as representing different regions within a component.  See
+the examples below.
 
 
 ## Installation
@@ -42,9 +43,40 @@ import '@qc/react-block/dist/styles/Block.css'
 export default function SomeComponent(props) {
   return (
     <Block className="Some">
-      <h2>Some Component</h2>
-      {/* Note: The margins of the h2 and p won't bleed-through. */}
+      <h1>Some Component</h1>
+      {/*
+      Note: The margins of the `h1` and `p` won't bleed-through
+      like they would with default styled `div`s.
+      */}
       <p>Some component demo'ing the Block component.</p>
+    </Block>
+  )
+}
+```
+
+```jsx
+import React from 'react'
+
+import Block from '@qc/react-block'
+
+import '@qc/react-block/dist/styles/Block.css'
+
+
+export default function Panel(props) {
+  return (
+    <Block className="Panel">
+      <Block className="Panel-Head">
+        <Title>Panel's Title</Title>
+      </Block>
+      <Block className="Panel-Body">
+        <h1>...</h1>
+        <p>...</p>
+        <h2>...</h2>
+        <p>...</p>
+      </Block>
+      <Block className="Panel-Foot">
+        <button>...</button>
+      </Block>
     </Block>
   )
 }
@@ -71,10 +103,28 @@ or
 import Block from '@qc/react-block/src/Block'
 ```
 
-You will need to be sure to transpile the code to a version compatible with the
-browsers you plan to support.
+to import the component.
+
+If you do this, then you will need to be sure to transpile the code to a syntax
+compatible with the browsers you plan to support.
+
+The source is using object spread syntax.  In order to transpile it with
+[babel], you must include the [object spread transform
+plugin][babel-obj-sprd-txm].
 
 
+## Maintainers
+
+- [Danny Hurlburt](https://github.com/dhurlburtusa)
+
+
+## License
+
+ISC
+
+
+[babel]: https://babeljs.io/
+[babel-obj-sprd-txm]: https://babeljs.io/docs/plugins/transform-object-rest-spread/
 [coverage-image]: https://coveralls.io/repos/github/hypersoftllc/qc-react-block/badge.svg?branch=master
 [coverage-url]: https://coveralls.io/github/hypersoftllc/qc-react-block?branch=master
 [downloads-image]: http://img.shields.io/npm/dm/@qc/react-block.svg
