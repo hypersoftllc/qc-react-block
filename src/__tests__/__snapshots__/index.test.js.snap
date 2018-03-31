@@ -34,6 +34,78 @@ exports[`Block rendered with compClassName should render with expected class att
 />
 `;
 
+exports[`Block rendered with compType should render with expected component 1`] = `
+<address
+  className="Block "
+/>
+`;
+
+exports[`Block rendered with compType should render with expected component 2`] = `
+<aside
+  className="Block "
+/>
+`;
+
+exports[`Block rendered with compType should render with expected component 3`] = `
+<article
+  className="Block "
+/>
+`;
+
+exports[`Block rendered with compType should render with expected component 4`] = `
+<div
+  className="Block "
+/>
+`;
+
+exports[`Block rendered with compType should render with expected component 5`] = `
+<footer
+  className="Block "
+/>
+`;
+
+exports[`Block rendered with compType should render with expected component 6`] = `
+<header
+  className="Block "
+/>
+`;
+
+exports[`Block rendered with compType should render with expected component 7`] = `
+<main
+  className="Block "
+/>
+`;
+
+exports[`Block rendered with compType should render with expected component 8`] = `
+<nav
+  className="Block "
+/>
+`;
+
+exports[`Block rendered with compType should render with expected component 9`] = `
+<section
+  className="Block "
+/>
+`;
+
+exports[`Block rendered with compType should render with expected component 10`] = `
+<div
+  className="Block foo"
+/>
+`;
+
+exports[`Block rendered with compType should render with expected component 11`] = `
+<div
+  className="block "
+/>
+`;
+
+exports[`Block rendered with compType should render with expected component 12`] = `
+<div
+  className="block foo"
+/>
+`;
+
 exports[`Block rendered with no props should use default props 1`] = `
 <div
   className="Block "

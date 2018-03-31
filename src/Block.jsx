@@ -27,7 +27,24 @@ Block.propTypes = {
   children: PT.node,
   className: PT.string,
   compClassName: PT.string,
-  compType: PT.oneOf(['div']),
+  compType: PT.oneOf([
+    'address',
+    'article',
+    'aside',
+    'blockquote',
+    'details',
+    'div',
+    'dl',
+    'fieldset',
+    'figcaption',
+    'figure',
+    'footer',
+    'form',
+    'header',
+    'main',
+    'nav',
+    'section',
+  ]),
 }
 
 export default Block
