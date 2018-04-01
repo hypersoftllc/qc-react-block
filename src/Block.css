@@ -1,5 +1,11 @@
 .Block {
   box-sizing: border-box;
   display: block;
+  /* Creates a block-formatting context: */
+  contain: layout;
+  /* Creates a block-formatting context: */
+  display: flow-root;
+  display: block flow-root;
+  /* Creates a block-formatting context: */
   overflow: auto;
 }

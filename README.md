@@ -8,9 +8,26 @@
 [![npm badge][npm-badge-png]][package-url]
 
 A React component that renders a `div` with the semantics of representing a
-block structure or region.  However, unlike a `div`, a `Block`'s default CSS
-prevents margin bleed-through which usually happens with heading elements,
-paragraph elements, and others.  Also, `border-box` box-sizing is used.
+block structure or region.
+
+A `div` is a [block-level element][ble] but by default it does not create a
+[block formatting context][bfc] (BFC).  Certain CSS properties can be applied to
+elements to give it a BFC.  Some of the methods are listed below.
+
+1) Block elements where `overflow` has a value other than `visible`.
+2) Elements with `contain` set to `layout`, `content`, or `strict`.
+3) Elements with `display`'s inside value set to `flow-root`.
+
+A BFC provides the following benefits, among others:
+
+* Prevents top and bottom margin bleedthrough.
+* Lets the background fill the entire area behind an element's content.
+
+See this [Block Formatting Context for Block-Level Elements][bfc-codepen]
+Codepen to see BFC in action.
+
+Note: Included with the BFC CSS is `box-sizing: border-box` since this is the
+box-sizing most sensible for a block.
 
 One of the most common use cases is to use `Block` as the root of a custom
 React component or as representing different regions within a component.  See
@@ -44,11 +61,12 @@ import '@qc/react-block/dist/styles/Block.css'
 
 export default function MyBlockComponent(props) {
   return (
-    <Block className="My">
+    <Block className="My" style={{ backgroundColor: '#bedfed' }}>
       <h1>My Block Component</h1>
       {/*
       Note: The margins of the `h1` and `p` won't bleed-through
-      like they would with default styled `div`s.
+      like they would with default styled `div`s.  Also, the
+      background color will fill the area behind the margins.
       */}
       <p>My component demo'ing the Block component.</p>
     </Block>
@@ -86,7 +104,27 @@ export default function Panel(props) {
 }
 ```
 
-**Custom Element**
+**Custom Component Type**
+
+`div`s are not the only element supported.  Any one of the following elements
+may be used by setting the `compType` property.
+
+* `address`
+* `article`
+* `aside`
+* `blockquote`
+* `details`
+* `div`
+* `dl`
+* `fieldset`
+* `figcaption`
+* `figure`
+* `footer`
+* `form`
+* `header`
+* `main`
+* `nav`
+* `section`
 
 ```jsx
 import React from 'react'
@@ -98,14 +136,17 @@ import '@qc/react-block/dist/styles/Block.css'
 
 export default function SiteFooter(props) {
   return (
-    <Block comp="footer">
+    <Block compType="footer">
       ...
     </Block>
   )
 }
 ```
 
-**With `Block` CSS**
+**Just Using `Block` CSS**
+
+The key to the `Block` component is in the CSS — not the JavaScript.  All that
+needs to be done is to include the `Block` CSS class in any† component.
 
 ```jsx
 import React from 'react'
@@ -121,6 +162,8 @@ export default function SiteFooter(props) {
   )
 }
 ```
+
+† Excluding [replaced elements].
 
 
 ## Use ES Modules
@@ -153,6 +196,22 @@ The source is using object spread syntax.  In order to transpile it with
 plugin][babel-obj-sprd-txm].
 
 
+## Why Multiple BFC Methods?
+
+Why are multiple BFC methods employed in the included CSS?
+
+This is to help ensure the block is still given a BFC if in the event that the
+CSS is overridden in a way that would have removed the BFC.  For instance, in
+browsers that support `contain: layout` or `display: flow-root`, the following
+will still have a BFC.
+
+```jsx
+<Block style={{overflow: 'visible'}}>
+  ...
+</Block>
+```
+
+
 ## Maintainers
 
 - [Danny Hurlburt](https://github.com/dhurlburtusa)
@@ -165,6 +224,9 @@ ISC
 
 [babel]: https://babeljs.io/
 [babel-obj-sprd-txm]: https://babeljs.io/docs/plugins/transform-object-rest-spread/
+[bfc]: https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context
+[bfc-codepen]: https://codepen.io/dhurlburtusa/pen/GxdBJX?editors=1100
+[ble]: https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements
 [coverage-image]: https://coveralls.io/repos/github/hypersoftllc/qc-react-block/badge.svg?branch=master
 [coverage-url]: https://coveralls.io/github/hypersoftllc/qc-react-block?branch=master
 [downloads-image]: http://img.shields.io/npm/dm/@qc/react-block.svg
@@ -173,5 +235,6 @@ ISC
 [license-url]: LICENSE
 [package-url]: https://npmjs.org/package/@qc/react-block
 [npm-badge-png]: https://nodei.co/npm/@qc/react-block.png?downloads=true&stars=true
+[replaced elements]: https://developer.mozilla.org/en-US/docs/Web/CSS/Replaced_element
 [travis-svg]: https://travis-ci.org/hypersoftllc/qc-react-block.svg?branch=master
 [travis-url]: https://travis-ci.org/hypersoftllc/qc-react-block
