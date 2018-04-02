@@ -146,7 +146,7 @@ export default function SiteFooter(props) {
 **Just Using `Block` CSS**
 
 The key to the `Block` component is in the CSS — not the JavaScript.  All that
-needs to be done is to include the `Block` CSS class in any† component.
+needs to be done is to include the `Block` CSS class in any<sup>†</sup> component.
 
 ```jsx
 import React from 'react'
@@ -163,7 +163,7 @@ export default function SiteFooter(props) {
 }
 ```
 
-† Excluding [replaced elements].
+<sup>†</sup> Excluding [replaced elements].
 
 
 ## Use ES Modules
