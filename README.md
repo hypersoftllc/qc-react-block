@@ -146,7 +146,8 @@ export default function SiteFooter(props) {
 **Just Using `Block` CSS**
 
 The key to the `Block` component is in the CSS — not the JavaScript.  All that
-needs to be done is to include the `Block` CSS class in any<sup>†</sup> component.
+needs to be done is to include the `Block` CSS class in any<sup>†</sup>
+component.
 
 ```jsx
 import React from 'react'
@@ -212,6 +213,13 @@ will still have a BFC.
 ```
 
 
+## Other Packages from [QC]
+
+* [@qc/react-conditionals][qc-react-conditionals]
+* [@qc/react-layer][qc-react-layer]
+* [@qc/react-page][qc-react-page]
+
+
 ## Maintainers
 
 - [Danny Hurlburt](https://github.com/dhurlburtusa)
@@ -235,6 +243,10 @@ ISC
 [license-url]: LICENSE
 [package-url]: https://npmjs.org/package/@qc/react-block
 [npm-badge-png]: https://nodei.co/npm/@qc/react-block.png?downloads=true&stars=true
+[qc]: https://www.npmjs.com/~qc
+[qc-react-conditionals]: https://www.npmjs.com/package/@qc/react-conditionals
+[qc-react-layer]: https://www.npmjs.com/package/@qc/react-layer
+[qc-react-page]: https://www.npmjs.com/package/@qc/react-page
 [replaced elements]: https://developer.mozilla.org/en-US/docs/Web/CSS/Replaced_element
 [travis-svg]: https://travis-ci.org/hypersoftllc/qc-react-block.svg?branch=master
 [travis-url]: https://travis-ci.org/hypersoftllc/qc-react-block

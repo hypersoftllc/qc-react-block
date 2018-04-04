@@ -1,6 +1,6 @@
 {
   "name": "@qc/react-block",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "A React component that renders a div with the semantics of representing a block structure or region.",
   "keywords": [
     "bfc",
